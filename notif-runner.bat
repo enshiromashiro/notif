@@ -1,4 +1,5 @@
 @echo off
+setlocal
 
 @rem ポップアップを出す時間(分)
 set /a SLEEPTIME=1
