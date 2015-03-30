@@ -3,7 +3,7 @@
 指定したテキストファイルの文字数増減を定期的にポップアップ通知する。
 Linux/Windows両用。
 
-![Linuxでの動作イメージ](https://github.com/subaru45/notif/wiki/images/notif-linux.png))
+![Linuxでの動作イメージ](https://github.com/subaru45/notif/wiki/images/notif-linux.png)
 
 ![Windowsでの動作イメージ](https://github.com/subaru45/notif/wiki/images/notif-win.png)
 
