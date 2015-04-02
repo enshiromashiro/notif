@@ -58,7 +58,7 @@ XPでも、PowerShellを追加でインストールすることが可能です�
 
 #### 初回だけ実行する操作
 
-Windows版notifはPoweShellスクリプトとして書かれていますが、
+Windows版notifはPowerShellスクリプトとして書かれていますが、
 PowerShellスクリプトはデフォルトの設定では実行できないようになっています。
 セキュリティリスクを抑えるためです。
 
