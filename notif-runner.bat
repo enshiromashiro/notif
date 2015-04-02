@@ -1,8 +1,17 @@
+
 @echo off
-setlocal
 
-@rem ポップアップを出す時間(分)
-set /a SLEEPTIME=15
+@rem notif.ps1を起動するだけのバッチ
 
-call "%~dp0notif.bat" "%1" %SLEEPTIME%
-pause
+@rem PowerShellのスクリプトにはドラッグ&ドロップできないため
+
+
+powershell "%~dp0notif.ps1" "%~f1"
+
+
+
+if not %ERRORLEVEL% == 0 (
+
+  pause
+
+)
