@@ -75,7 +75,7 @@ Vista/7ではスタートメニューの「アクセサリ」→「Windows Power
 
 すると、実行ポリシーを変更するかどうか訊かれるので「Y」を入力します。
 
-![実行ポリシーを変更したところ](https://raw.githubusercontent.com/wiki/subaru45/notif/images/psh-policy.pngl)
+![実行ポリシーを変更したところ](https://raw.githubusercontent.com/wiki/subaru45/notif/images/psh-policy.png)
 
 これで、PowerShellスクリプトを実行できるようになりました。
 ためしにnotifを起動してみてください。
