@@ -65,7 +65,13 @@ PowerShellスクリプトはデフォルトの設定では実行できないよ�
 そこでまず、スクリプトを実行できるように設定を変える必要があります。
 
 まず、PowerShellを管理者権限で起動します。
-Vista/7ではスタートメニューの「アクセサリ」→「Windows PowerShell」にある「Windows PowerShell」を右クリックし、「管理者として実行」を選びます。
+Windows XPでは、管理者権限のあるユーザでWindows PowerShellを起動すればいいです。
+
+Windows Vista/7では、スタートメニューの「アクセサリ」→「Windows PowerShell」にある「Windows PowerShell」を右クリックし、「管理者として実行」を選びます。
+
+Windows 8では、マウスポインタをデスクトップ右上に持っていき「チャーム」を表示します。
+つぎに、検索を選び「powershell」と入力し、検索結果に出てきた"Windows PowerShell"のアイコンを右クリックします。
+するとメニューに「管理者として実行」が現れるので、それをクリックします。
 
 ![PowerShellの起動(管理者権限)](https://raw.githubusercontent.com/wiki/subaru45/notif/images/psh-admin.png)
 
