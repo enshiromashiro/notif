@@ -151,19 +151,21 @@ function ui_init() {
   $panel.Controls.Add($label)
 
   $button.Text = "ä‘äuÇïœçX"
-  $button.Top = $numupdown.Height + 2
+  $button.Top = $numupdown.Height
   $button.Size = new-object Drawing.Size @(150, $numupdown.Height)
   $button.Font = $font1
   $button.Add_Click({$script:sleeptime = $numupdown.Value})
   
-  $textlog.Dock = "Bottom"
-  $textlog.Size = New-Object System.Drawing.Size(350,$($numupdown.Height * 4))
+  $textlog.Top = $numupdown.Height + $button.Height
+  $textlog.Width = 380
+  $textlog.Height = $numupdown.Height * 4
   $textlog.Multiline = $true
   $textlog.Scrollbars = "Vertical"
   $textlog.ReadOnly = $true
   $textlog.Font = $font2
 
-  $form.Size = new-object Drawing.Size @(380, $($numupdown.Height * 7))
+  $form.Width = 380
+  $form.Height = $numupdown.Height * 7
   $form.Text = "notif"
   $form.MaximizeBox = $false
   $form.FormBorderStyle = "FixedSingle"
