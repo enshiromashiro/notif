@@ -52,6 +52,11 @@ do
     notify-send \
         "[`date +"$DATE_FORMAT"`]" \
         "`generate_msg $CHDIFF $CHNUM`"
+
+    echo "[`date +"$DATE_FORMAT"`]" \
+         $SLEEP_TIME \
+         $CHDIFF \
+         $CHNUM
     
     CHARNUM=$TMPCHNUM
 done
