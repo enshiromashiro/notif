@@ -16,6 +16,7 @@ get_charnum() {
 
 generate_msg() {
     echo "$SLEEP_TIMEで書いた文字数: $1文字"
+    echo "総文字数: $2文字"
 }
 
 
@@ -49,8 +50,8 @@ do
     CHNUM=`get_charnum $1`
     CHDIFF=`expr $CHNUM - $CHNUM_PREV`
     notify-send \
-        "`generate_msg $CHDIFF`" \
-        "[`date +"$DATE_FORMAT"`]"
+        "[`date +"$DATE_FORMAT"`]" \
+        "`generate_msg $CHDIFF $CHNUM`"
     
     CHARNUM=$TMPCHNUM
 done
