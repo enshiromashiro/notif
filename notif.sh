@@ -58,5 +58,5 @@ do
          $CHDIFF \
          $CHNUM
     
-    CHARNUM=$TMPCHNUM
+    CHNUM_PREV=$CHNUM
 done
