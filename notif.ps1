@@ -13,11 +13,11 @@ param(
 [string] $datefmt = "[%Y-%m-%d %H:%M:%S]"
 
 ## variables
-[int] $sleeptime=15
-[int] $char_num_prev=0
-[int] $char_num=0
-[int] $eplaced=0
-[int] $wrote_chnum=0
+[int] $sleeptime = 15
+[int] $char_num_prev = 0
+[int] $char_num = 0
+[int] $eplaced = 0
+[int] $wrote_chnum = 0
 
 
 function main() {
@@ -51,21 +51,15 @@ function genmsg($chdiff, $chnum) {
           "  ëçï∂éöêî: " + $chnum + "ï∂éö")
 }
 
-function notify_send() {
-  $script:char_num = get_charnum
-  $char_diff = $char_num - $char_num_prev
-  $script:wrote_chnum += $char_diff
-  
+function notify_send($diff, $num) {
   $title = get-date -uformat $datefmt
-  $text = genmsg $char_diff $char_num
+  $text = genmsg $diff $num
   
   notify 10000 $title $text "Info"
   $textlog.Text = $textlog.Text + $title + "`r`n" + $text + "`r`n"
   $textlog.SelectionStart = $textlog.Text.Length
   $textlog.Focus()
   $textlog.ScrolltoCaret()
-  
-  $script:char_num_prev = $char_num
 }
 
 ## timer
@@ -75,7 +69,14 @@ function tick() {
   $script:eplaced += 1
   if ($minutes -ge $sleeptime) {
     $script:minutes = 0
-    notify_send
+
+    $script:char_num = get_charnum
+    $char_diff = $char_num - $char_num_prev
+    $script:wrote_chnum += $char_diff
+
+    notify_send $char_diff $char_num
+
+    $script:char_num_prev = $char_num
   }
 }
 
