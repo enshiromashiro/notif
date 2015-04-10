@@ -58,7 +58,9 @@ function notify_send() {
   
   notify 10000 $title $text "Info"
   $textlog.Text = $textlog.Text + $title + "`r`n" + $text + "`r`n"
-  $textlog.ScrolltoCaret
+  $textlog.SelectionStart = $textlog.Text.Length
+  $textlog.Focus()
+  $textlog.ScrolltoCaret()
   
   $script:char_num_prev = $char_num
 }
