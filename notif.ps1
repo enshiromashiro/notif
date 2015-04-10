@@ -134,6 +134,7 @@ function ui_init() {
     
   $numupdown.Value = $sleeptime
   $numupdown.Minimum = 1
+  $numupdown.Maximum = 240
   $numupdown.Width = 70
   $numupdown.Anchor = "Left"
   $numupdown.Font = $font1
