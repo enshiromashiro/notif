@@ -16,6 +16,8 @@ param(
 [int] $sleeptime=15
 [int] $char_num_prev=0
 [int] $char_num=0
+[int] $eplaced=0
+[int] $wrote_chnum=0
 
 
 function main() {
@@ -44,14 +46,15 @@ function notify($timeout, $title, $text, $icon) {
 }
 
 function genmsg($chdiff, $chnum) {
-  return ($sleeptime.ToString() `
-           + "•ª‚Å‘‚¢‚½•¶š”: " + $chdiff + "•¶š`r`n" `
-           + "‘•¶š”: " + $chnum + "•¶š")
+  return ("  " + $sleeptime + "•ªŠÔ‚Å‘‚¢‚½•¶š”: " + $chdiff + "•¶š`r`n" + `
+          "  ŠJnŒã" + $eplaced + "•ª‚Å‘‚¢‚½•¶š”: " + $wrote_chnum + "•¶š`r`n" + `
+          "  ‘•¶š”: " + $chnum + "•¶š")
 }
 
 function notify_send() {
   $script:char_num = get_charnum
   $char_diff = $char_num - $char_num_prev
+  $script:wrote_chnum += $char_diff
   
   $title = get-date -uformat $datefmt
   $text = genmsg $char_diff $char_num
@@ -69,6 +72,7 @@ function notify_send() {
 $minutes = 0
 function tick() {
   $script:minutes += 1
+  $script:eplaced += 1
   if ($minutes -ge $sleeptime) {
     $script:minutes = 0
     notify_send
