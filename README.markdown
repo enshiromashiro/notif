@@ -3,10 +3,13 @@
 指定したテキストファイルの文字数増減を定期的にポップアップ通知する。
 Linux/Windows両用。
 
-![Linuxでの動作イメージ](https://github.com/subaru45/notif/wiki/images/notif-linux.png)
-
 ![Windowsでの動作イメージ](https://github.com/subaru45/notif/wiki/images/notif-win.png)
 
+* Windowsでの動作イメージ
+
+![Linuxでの動作イメージ](https://github.com/subaru45/notif/wiki/images/notif-linux.png)
+
+* Linuxでの動作イメージ
 
 ## 必要なもの
 
@@ -75,6 +78,8 @@ Windows 8では、マウスポインタをデスクトップ右上に持って�
 
 ![PowerShellの起動(管理者権限)](https://raw.githubusercontent.com/wiki/subaru45/notif/images/psh-admin.png)
 
+* PowerShellの起動 (Windows Vista)
+
 青い画面が起動したら、そこに次のように打ちこみます:
 
     > Set-ExecutionPolicy RemoteSigned
@@ -82,6 +87,8 @@ Windows 8では、マウスポインタをデスクトップ右上に持って�
 すると、実行ポリシーを変更するかどうか訊かれるので「Y」を入力します。
 
 ![実行ポリシーを変更したところ](https://raw.githubusercontent.com/wiki/subaru45/notif/images/psh-policy.png)
+
+* 実行ポリシーを変更したところ
 
 これで、PowerShellスクリプトを実行できるようになりました。
 ためしにnotifを起動してみてください。
