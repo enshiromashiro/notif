@@ -104,7 +104,7 @@ function tick() {
   $form.Text = gentitle ($sleeptime * 60 - $seconds)
   
   if ($seconds -ge $sleeptime * 60) {
-    $script:eplacedmin += 1
+    $script:eplacedmin += $sleeptime
     $script:seconds = 0
 
     $script:char_num = get_charnum
